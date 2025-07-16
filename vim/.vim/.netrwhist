@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/rahim/.vim/bundle/lh-brackets/ftplugin/python'
+let g:netrw_dirhist_1='/home/rahim/.vim/bundle/lh-brackets/ftplugin'
+let g:netrw_dirhist_0='/home/rahim/.vim/bundle/lh-brackets'
+let g:netrw_dirhist_9='/home/rahim/.vim/bundle'
+let g:netrw_dirhist_8='/home/rahim/.config/hypr/hyprland'
+let g:netrw_dirhist_7='/home/rahim/.config/Ax-Shell/config'
+let g:netrw_dirhist_6='/home/rahim/.config/Ax-Shell'
+let g:netrw_dirhist_5='/home/rahim/.config'
+let g:netrw_dirhist_4='/home/rahim/.config/Ax-Shell'
+let g:netrw_dirhist_3='/home/rahim/.config/Ax-Shell/assets/wallpapers_example'

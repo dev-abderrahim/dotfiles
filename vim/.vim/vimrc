@@ -1,0 +1,96 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/bundle')
+
+" Terminal wrapper
+Plug 'voldikss/vim-floaterm'
+
+" Keep Plugin commands between vundle#begin/end.
+Plug 'tpope/vim-fugitive'
+
+" Check syntax in Vim/Neovim asynchronously and fix files, with Language Server Protocol (LSP) support 
+Plug 'dense-analysis/ale'
+
+" A code-completion engine for Vim
+Plug 'ycm-core/YouCompleteMe'
+
+" C&C++ ftplugins suite for Vim
+Plug 'LucHermitte/lh-vim-lib'
+Plug 'LucHermitte/lh-style'
+Plug 'LucHermitte/lh-tags'
+Plug 'LucHermitte/lh-dev'
+Plug 'LucHermitte/lh-brackets'
+Plug 'LucHermitte/searchInRuntime'
+Plug 'LucHermitte/mu-template'
+Plug 'tomtom/stakeholders_vim'
+Plug 'LucHermitte/alternate-lite'
+Plug 'LucHermitte/lh-cpp'
+
+" Themes
+Plug 'whatyouhide/vim-gotham'
+"Plugin 'wojciechkepka/vim-github-dark'
+
+" Vim Language Server Protocol
+Plug 'prabirshrestha/vim-lsp'
+
+" File browser
+Plug 'preservim/nerdtree'
+
+" Git visuals support
+Plug 'airblade/vim-gitgutter'
+
+" Comments toggle, simple action: select and `gcc`
+Plug 'tpope/vim-commentary'
+
+" Status line
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Docs generator
+Plug 'vim-scripts/DoxygenToolkit.vim'
+
+" All of your Plugins must be added before the following line
+call plug#end()		 " required
+
+"" Configurations
+syntax on
+
+set scrolloff=5
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set autoindent
+set textwidth=100
+set number
+set mouse=a
+set updatetime=100
+set list listchars=tab:❘-,trail:·,extends:»,precedes:«,nbsp:×
+
+if has("vim")
+  set signcolumn="yes"
+endif
+
+" convert spaces to tabs when reading file
+autocmd! bufreadpost * set noexpandtab | retab! 4
+" convert tabs to spaces before writing file
+autocmd! bufwritepre * set noexpandtab | retab! 4
+" convert spaces to tabs after writing file
+autocmd! bufwritepost * set noexpandtab | retab! 4
+
+let g:usemarks=0
+
+filetype plugin indent on
+
+""" Customize themes
+colorscheme gotham256
+let g:airline_theme='simple'
+
+""" Remapping
+" NERDTree
+nmap <F2> :NERDTree<CR>
+
