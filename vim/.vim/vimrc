@@ -54,7 +54,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
 " All of your Plugins must be added before the following line
-call plug#end()		 " required
+call plug#end()	   " required
 
 "" Configurations
 syntax on
@@ -76,19 +76,19 @@ if has("vim")
 endif
 
 " convert spaces to tabs when reading file
-autocmd! bufreadpost * set noexpandtab | retab! 4
+" autocmd! bufreadpost * set noexpandtab | retab! 4
 " convert tabs to spaces before writing file
-autocmd! bufwritepre * set noexpandtab | retab! 4
+" autocmd! bufwritepre * set noexpandtab | retab! 4
 " convert spaces to tabs after writing file
-autocmd! bufwritepost * set noexpandtab | retab! 4
+" autocmd! bufwritepost * set noexpandtab | retab! 4
 
 let g:usemarks=0
 
 filetype plugin indent on
 
 """ Customize themes
-colorscheme gotham256
-let g:airline_theme='simple'
+" colorscheme gotham256
+let g:airline_theme="dark_minimal"
 
 """ Remapping
 " NERDTree
