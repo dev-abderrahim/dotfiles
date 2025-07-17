@@ -21,10 +21,16 @@ map("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
 -- =============================================================================
 
 -- Nvim-Tree (File Explorer)
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+map("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle file explorer" })
 
 -- ToggleTerm (Terminal)
 map("n", "<C-\\>", ":ToggleTerm<CR>", { desc = "Toggle floating terminal" })
+
+-- Dropbar.nvim
+-- local dropbar_api = require('dropbar.api')
+-- vim.keymap.set('n', '<Leader>;', dropbar_api.pick, { desc = 'Pick symbols in winbar' })
+-- vim.keymap.set('n', '[;', dropbar_api.goto_context_start, { desc = 'Go to start of current context' })
+-- vim.keymap.set('n', '];', dropbar_api.select_next_context, { desc = 'Select next context' })
 
 -- =============================================================================
 -- LSP KEYMAPS (NATIVE LSP)
@@ -60,6 +66,6 @@ map("n", "<leader>nc", function()
     require("notify").clear()
 end, { desc = "Clear all notifications" })
 
-map("n", "<leader>nhc", function()
-    require("notify").clear_history()
-end, { desc = "Clear notification history" })
+-- map("n", "<leader>nhc", function()
+-- 	require("notify").clear_history()
+-- end, { desc = "Clear notification history" })
