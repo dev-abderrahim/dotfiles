@@ -1,3 +1,121 @@
+" " --- Plugin Management ---
+" " Install vim-plug if it's not already there
+" let g:plug_install_dir = has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged'
+" if empty(glob(g:plug_install_dir . '/autoload/plug.vim'))
+"   silent !curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+"   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" endif
+"
+" call plug#begin(g:plug_install_dir)
+"
+" " --- General Purpose Plugins ---
+" Plug 'tpope/vim-fugitive'          " Git wrapper
+" Plug 'airblade/vim-gitgutter'      " Git diff signs in the gutter
+" Plug 'tpope/vim-commentary'        " Easy commenting with gcc
+"
+" " --- UI & Aesthetics ---
+" Plug 'voldikss/vim-floaterm'       " Floating terminal
+" Plug 'preservim/nerdtree'          " File browser
+" Plug 'vim-airline/vim-airline'     " Status line
+" Plug 'vim-airline/vim-airline-themes' " Airline themes
+" Plug 'whatyouhide/vim-gotham'      " Gotham color scheme
+"
+" " --- LSP & Completion ---
+" Plug 'dense-analysis/ale'          " Asynchronous Linting Engine (supports LSP)
+" Plug 'ycm-core/YouCompleteMe'      " Code completion engine
+" Plug 'prabirshrestha/vim-lsp'      " Vim Language Server Protocol client
+"
+" " --- C/C++ Development Suite (LucHermitte) ---
+" " Keep these together as they are a suite
+" Plug 'LucHermitte/lh-vim-lib'
+" Plug 'LucHermitte/lh-style'
+" Plug 'LucHermitte/lh-tags'
+" Plug 'LucHermitte/lh-dev'
+" Plug 'LucHermitte/lh-brackets'
+" Plug 'LucHermitte/searchInRuntime'
+" Plug 'LucHermitte/mu-template'
+" Plug 'tomtom/stakeholders_vim'
+" Plug 'LucHermitte/alternate-lite'
+" Plug 'LucHermitte/lh-cpp'
+"
+" " --- Documentation ---
+" Plug 'vim-scripts/DoxygenToolkit.vim' " Doxygen documentation generator
+"
+" " --- End of Plugin List ---
+" call plug#end()
+"
+" " --- General Settings ---
+" syntax on               " Enable syntax highlighting
+" filetype plugin indent on " Enable filetype-specific plugins and indentation
+"
+" " --- UI & Appearance Settings ---
+" set scrolloff=5         " Lines of context above/below cursor
+" set number              " Show line numbers
+" set mouse=a             " Enable mouse support in all modes
+" set updatetime=100      " Shorter update time for plugins like LSP, GitGutter
+" set list                " Show invisible characters
+" set listchars=tab:▸ ,trail:·,extends:»,precedes:«,nbsp:× " Customize invisible chars
+"
+" " Set signcolumn only in Vim, Neovim handles it differently or by default
+" if has("vim")
+"   set signcolumn=yes
+" endif
+"
+" " --- Indentation Settings ---
+" set expandtab           " Convert tabs to spaces
+" set tabstop=2           " Number of spaces a tab counts for
+" set softtabstop=2       " Number of spaces tab key inserts
+" set shiftwidth=2        " Number of spaces for indenting (e.g., autoindent)
+" set autoindent          " Auto-indent new lines
+" set textwidth=100       " Wrap text at 100 columns (optional)
+"
+" " --- Theme & Plugin Specific Configurations ---
+" colorscheme gotham256   " Set your preferred color scheme
+" let g:airline_theme="dark_minimal" " Airline theme
+"
+" " --- Key Mappings ---
+" " NERDTree Toggle
+" nnoremap <F2> :NERDTreeToggle<CR> " Use nnoremap for non-recursive mapping and Toggle for convenience
+"
+" " --- YouCompleteMe Specific Settings ---
+" " Disable YCM's semantic completion from comments
+" let g:ycm_collect_identifiers_from_comments_and_strings = 0
+"
+" " --- ALE Specific Settings ---
+" " Enable linting on save and on text changed
+" let g:ale_lint_on_save = 1
+" let g:ale_lint_on_text_changed = 'always'
+" let g:ale_sign_column_always = 1 " Always show the sign column
+"
+" " --- Floaterm Specific Settings ---
+" " Set default size and position for floaterm
+" let g:floaterm_width = 0.8
+" let g:floaterm_height = 0.8
+" let g:floaterm_position = 'center'
+" let g:floaterm_key_toggle = '<F3>' " Example key to toggle floaterm
+"
+" " --- Unused/Commented out lines from original ---
+" " let g:usemarks=0 " This variable doesn't seem to be used by common plugins.
+" " " Autocommands for tab/space conversion. It's generally better to let
+" " " 'expandtab' handle this or use filetype-specific settings if needed.
+" " autocmd! bufreadpost * set noexpandtab | retab! 4
+" " autocmd! bufwritepre * set noexpandtab | retab! 4
+" " autocmd! bufwritepost * set noexpandtab | retab! 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
