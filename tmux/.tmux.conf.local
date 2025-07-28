@@ -1,0 +1,90 @@
+# === Terminal fix ===
+set -g default-terminal "screen-256color"
+set -sg terminal-overrides ",*:RGB"
+
+# === Better prefix ===
+unbind C-b
+set -g prefix `
+bind ` send-prefix
+
+# === Options ===
+set -g bell-action any
+set -g default-command "${SHELL}"
+set -g mouse off
+set -g automatic-rename off
+set -g escape-time 0
+set -g base-index 1
+set -g pane-base-index 1
+set -g renumber-windows on
+
+set -g clock-mode-colour cyan
+set -g clock-mode-style 24
+
+# === Status ===
+set -g status-bg default
+set -g status-style bg=default
+set -g status-fg white
+
+set -g window-status-current-style "fg=blue"
+set -g window-status-current-format '#{?window_zoomed_flag,#[fg=red],}*'
+set -g window-status-style "fg=0,bold,bg=default"
+set -g window-status-format '#{?window_bell_flag,!,-}'
+set -g window-status-bell-style "fg=magenta,bg=default"
+
+set -g status-interval 60
+
+set -g status-left ''
+
+set -g status-right ''
+set -g status-right '#[fg=cyan]#S'
+
+set -g status-justify left
+
+# === Colors ===
+set -g pane-border-style "fg=colour8"
+set -g pane-active-border-style "fg=colour4"
+
+# === Keybindings ===
+bind w select-pane -U
+bind a select-pane -L
+bind s select-pane -D
+bind d select-pane -R
+
+bind n command-prompt -I ',~/' -p 'Session name:,Path:' 'new-session -c %2 -s %1'
+
+bind -r C-w resize-pane -U
+bind -r C-a resize-pane -L
+bind -r C-s resize-pane -D
+bind -r C-d resize-pane -R
+
+bind f resize-pane -Z
+
+bind q detach-client
+bind e choose-session
+
+bind h split-window -h
+bind v split-window -v
+
+# === Keybindings (copy mode) ===
+bind W copy-mode -u
+
+bind -T copy-mode w send-keys -X cursor-up
+bind -T copy-mode a send-keys -X cursor-left
+bind -T copy-mode s send-keys -X cursor-down
+bind -T copy-mode d send-keys -X cursor-right
+
+bind -T copy-mode-vi w send-keys -X cursor-up
+bind -T copy-mode-vi a send-keys -X cursor-left
+bind -T copy-mode-vi s send-keys -X cursor-down
+bind -T copy-mode-vi d send-keys -X cursor-right
+
+bind -T copy-mode-vi q send-keys -X cursor-down
+bind -T copy-mode-vi e send-keys -X cursor-right
+
+bind -T copy-mode-vi W send-keys -X -N5 cursor-up
+bind -T copy-mode-vi A send-keys -X previous-word
+bind -T copy-mode-vi S send-keys -X -N5 cursor-down
+bind -T copy-mode-vi D send-keys -X next-word
+
+# === Plugins ===
+set -g @plugin 'TechnicalDC/tmux-pywal-theme'
