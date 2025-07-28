@@ -13,32 +13,17 @@ if status is-interactive
 end
 
 starship init fish | source
-if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
-    cat ~/.cache/ags/user/generated/terminal/sequences.txt
+if test -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt
+    cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
 end
 
-alias pamcan=pacman
+alias pamcan pacman
+alias ls 'eza --icons'
+alias clear "printf '\033[2J\033[3J\033[1;1H'"
+alias q 'qs -c ii'
+    
 
 # function fish_prompt
 #   set_color cyan; echo (pwd)
 #   set_color green; echo '> '
 # end
-
-export PATH_TO_FX="$HOME/devel/javafx-sdk-24.0.1"
-
-# ASDF configuration code
-if test -z $ASDF_DATA_DIR
-    set _asdf_shims "$HOME/.asdf/shims"
-else
-    set _asdf_shims "$ASDF_DATA_DIR/shims"
-end
-
-# Do not use fish_add_path (added in Fish 3.2) because it
-# potentially changes the order of items in PATH
-if not contains $_asdf_shims $PATH
-    set -gx --prepend PATH $_asdf_shims
-end
-set --erase _asdf_shims
-
-wal -i $(swww query | awk -F 'image: ' '{print $2}') &> /dev/null 
-wal -R &> /dev/null
