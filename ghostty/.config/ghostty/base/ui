@@ -1,0 +1,33 @@
+# UI RELATED CONFIGURATIONS
+
+# // FONT //
+
+#font-family = "" # Clear fallback list
+font-family = "JetBrainsMono Nerd Font"
+font-family = "SpaceMono Nerd Font"
+
+# // STYLE //
+
+font-size = 10
+
+# synthesize bold, italic, and bold italic styles if the font does not have a
+# specific style. this is more like "emulating" the font style
+# font-synthetic-style = false
+
+# // APPEARANCE //
+
+# This affects the appearance of text and of any images with transparency.
+# Additionally, custom shaders will receive colors in the configured space.
+alpha-blending = native
+
+# NOTE: to list themes use `ghostty +list-themes`
+# Subdirectory `ghostty/themes` used to store themes in ghostty configurations syntax
+theme = /home/rahim/.cache/wal/colors-ghostty
+
+# A value of 1 is fully opaque and a value of 0 is fully transparent.
+background-opacity = 0.8
+
+# # VALUES: true, false, <POSITIVE INTEGER>
+background-blur = true 
+
+# custom-shader = bloom.glsl

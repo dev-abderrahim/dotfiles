@@ -1,0 +1,22 @@
+mouse-hide-while-typing = true
+
+# The command to run, usually a shell.
+command = /bin/fish --login --interactive
+
+# The command to run at first launch only.
+#initial-command = fastfetch
+
+# Keep the terminal open after the command exits.
+# The terminal window will stay open until any keypress is received.
+#wait-after-command = true
+
+# The size of the scrollback buffer in bytes.
+#scrollback-limit =
+
+focus-follows-mouse = true
+
+# //  CLIPBOARD //
+clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = true
+
+copy-on-select = false
