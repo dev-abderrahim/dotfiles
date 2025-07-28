@@ -11,6 +11,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Colorscheme Picker (Telescope-themes ext.)
 vim.keymap.set('n', '<M-t>', '<cmd>Telescope themes<cr>', { desc = 'Set colorscheme' })
 
+-- Buffline keymapping
+vim.keymap.set('n', '<leader><TAB>', '<cmd>BufferLinePick<cr>', { desc = 'Pick a buffer to open' })
+vim.keymap.set('n', '<leader><S-TAB>', '<cmd>BufferLinePickClose<cr>', { desc = 'Pick a buffer to close' })
+vim.keymap.set('n', '<TAB>', '<cmd>BufferLineCycleNext<cr>', { desc = 'Go to next buffer' })
+vim.keymap.set('n', '<S-TAB>', '<cmd>BufferLineCyclePrev<cr>', { desc = 'Go to previews buffer' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
