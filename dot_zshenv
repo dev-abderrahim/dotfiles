@@ -1,0 +1,12 @@
+export GPG_TTY=$(tty)
+
+command -v mise 2>&1 1>/dev/null && eval "$(mise activate zsh)"
+command -v most 2>&1 1>/dev/null && export PAGER=most
+
+PATH="$HOME/.local/bin:/usr/local/bin:$HOME/bin:/usr/lib/jvm/default/bin:$PATH"
+PATH="$PATH:$HOME/.opencode/bin"
+#PATH="$HOME/.local/share/mise/installs/cargo/*/bin:$PATH"
+PATH="$HOME/.local/share/mise/shims:$PATH"
+
+
+export PATH
