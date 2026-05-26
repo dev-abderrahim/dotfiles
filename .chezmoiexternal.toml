@@ -1,3 +1,4 @@
+# Zsh shell --------------------------------------------------------------
 [".oh-my-zsh"]
   type = "git-repo"
   url = "https://github.com/ohmyzsh/ohmyzsh.git"
@@ -13,3 +14,24 @@
 
 [".oh-my-zsh/custom/themes/powerlevel10k".clone]
   args = ["--depth", "1"]
+
+# Fonts ------------------------------------------------------------------
+[".local/share/fonts/Iosevka"]
+  type = "archive"
+  url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Iosevka.zip"
+  refreshPeriod = "168h"
+
+[".local/share/fonts/JetBrainsMono"]
+  type = "archive"
+  url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip"
+  refreshPeriod = "168h"
+
+[".local/share/fonts/NerdfontsSymbolsOnly"]
+  type = "archive"
+  url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/NerdFontsSymbolsOnly.zip"
+  refreshPeriod = "168h"
+
+[".local/share/fonts/VictorMono"]
+  type = "archive"
+  url = "https://rubjo.github.io/victor-mono/VictorMonoAll.zip"
+  refreshPeriod = "168h"
