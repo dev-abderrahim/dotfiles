@@ -16,7 +16,7 @@ font-family = VictorMono
 font-feature = calt, liga
 
 # ----- Theme -----
-theme = Ubuntu
+theme = modus-vivendi-deuteranopia
 bold-color = bright
 
 # ----- Shell & Terminal Behavior -----
