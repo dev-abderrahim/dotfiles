@@ -5,9 +5,6 @@ export VISUAL=${VISUAL:-$EDITOR}
 # GPG
 export GPG_TTY=$(tty)
 
-# Pager
-command -v most &>/dev/null && export PAGER=most
-
 # PATH
 path=(
     ~/.local/share/mise/shims
